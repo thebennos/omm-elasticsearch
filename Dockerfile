@@ -3,7 +3,7 @@ MAINTAINER Benjamin Wenderoth
 
 ENV ES_HOME /usr/share/elasticsearch
 WORKDIR ${ES_HOME}
-
+ADD ./elasticsearch.yml /etc/elasticsearch/elasticsearch.yml
 RUN bin/plugin install royrusso/elasticsearch-HQ
 RUN bin/plugin install discovery-multicast
 RUN bin/plugin install analysis-icu
